@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kamile 🩷</title>
+
+<style>
+body {
+margin: 0;
+font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+color: #8b004f;
+text-align: center;
+overflow-x: hidden;
+}
+
+.container {
+max-width: 800px;
+margin: 80px auto;
+background: rgba(255, 255, 255, 0.9);
+padding: 40px;
+border-radius: 25px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+h1 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+}
+
+p {
+font-size: 1.1rem;
+line-height: 1.7;
+}
+
+.heart {
+position: fixed;
+top: -10px;
+font-size: 24px;
+animation: fall linear infinite;
+color: #ff4d88;
+pointer-events: none;
+}
+
+@keyframes fall {
+0% {
+transform: translateY(-10px) rotate(0deg);
+opacity: 1;
+}
+100% {
+transform: translateY(110vh) rotate(360deg);
+opacity: 0;
+}
+}
+
+.button {
+display: inline-block;
+margin-top: 30px;
+padding: 15px 30px;
+background: #ff4d88;
+color: white;
+text-decoration: none;
+border-radius: 30px;
+font-size: 1.2rem;
+transition: 0.3s;
+}
+
+.button:hover {
+background: #e6005c;
+transform: scale(1.05);
+}
+
+.signature {
+margin-top: 30px;
+font-size: 1.2rem;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Kamile 🩷</h1>
+
+<p>
+Kamile aš atsiprašau kad aš esu toks kiaule, paskutines dienas taip gerai viskas buvo
+ir dabar sugadinau. prisižadu dabar nieko tokio nešneketi ir eisiu i sporto salę
+kasdiena ir prašau leisk man gert nebent tik viena karta savaitgali ir nedaugiau.
+</p>
+
+<p>
+turiu tau pasiulyma kad mes kartu užblokuojam ariana ir gusta aš surasiu nauja
+friendgroupa jau turi pora geru idėju.
+</p>
+
+<p>
+labai atsiprašau pripažystu savo kalte ir labai tave myliu mano zuikuti🩷🩷.
+</p>
+
+<p>
+<em>ps. lauk valentino dienos labai geru siurprizu tau turiu.</em>
+</p>
+
+<a class="button" href="#" onclick="alert('Aš tave myliu 🩷')">
+💗 Spausk čia 💗
+</a>
+
+<div class="signature">
+— su meile 🩷
+</div>
+</div>
+
+<script>
+function createHeart() {
+const heart = document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML = "🩷";
+heart.style.left = Math.random() * 100 + "vw";
+heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+heart.style.fontSize = (16 + Math.random() * 24) + "px";
+
+document.body.appendChild(heart);
+
+setTimeout(() => {
+heart.remove();
+}, 8000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
